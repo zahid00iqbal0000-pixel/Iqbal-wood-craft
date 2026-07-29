@@ -1,0 +1,127 @@
+{
+  "entities": {
+    "products": {
+      "title": "products",
+      "description": "Showroom solid wood furniture catalog items",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "woodType": { "type": "string" },
+        "dimensions": { "type": "string" },
+        "finishStain": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "inStock": { "type": "boolean" },
+        "isFeatured": { "type": "boolean" },
+        "isBestSeller": { "type": "boolean" },
+        "isNewArrival": { "type": "boolean" },
+        "isPremiumCollection": { "type": "boolean" },
+        "rating": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "category", "price", "woodType"]
+    },
+    "orders": {
+      "title": "orders",
+      "description": "Customer furniture purchases and order tracking",
+      "type": "object",
+      "properties": {
+        "customerName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "city": { "type": "string" },
+        "deliveryAddress": { "type": "string" },
+        "totalPkr": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "paymentProofTxn": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "orderStatus": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["customerName", "phone", "totalPkr", "orderStatus"]
+    },
+    "custom_orders": {
+      "title": "custom_orders",
+      "description": "Bespoke custom furniture requests",
+      "type": "object",
+      "properties": {
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "city": { "type": "string" },
+        "category": { "type": "string" },
+        "preferredDesignTitle": { "type": "string" },
+        "dimensions": { "type": "string" },
+        "woodType": { "type": "string" },
+        "colourStain": { "type": "string" },
+        "budgetPkr": { "type": "number" },
+        "specialRequirements": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["customerName", "phone", "woodType", "status"]
+    },
+    "ai_faqs": {
+      "title": "ai_faqs",
+      "description": "AI Assistant knowledge base entries",
+      "type": "object",
+      "properties": {
+        "question": { "type": "string" },
+        "answer": { "type": "string" },
+        "category": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["question", "answer", "category"]
+    },
+    "ai_conversations": {
+      "title": "ai_conversations",
+      "description": "Logged AI sales assistant chat threads",
+      "type": "object",
+      "properties": {
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "lastActive": { "type": "string" },
+        "status": { "type": "string" },
+        "messages": { "type": "array" }
+      },
+      "required": ["customerName", "status"]
+    },
+    "payment_details": {
+      "title": "payment_details",
+      "description": "Official company payment account configurations",
+      "type": "object",
+      "properties": {
+        "bankName": { "type": "string" },
+        "accountTitle": { "type": "string" },
+        "accountNumber": { "type": "string" },
+        "iban": { "type": "string" },
+        "branchCode": { "type": "string" },
+        "jazzCashNumber": { "type": "string" },
+        "jazzCashTitle": { "type": "string" },
+        "easyPaisaNumber": { "type": "string" },
+        "easyPaisaTitle": { "type": "string" },
+        "advancePaymentNotice": { "type": "string" }
+      }
+    },
+    "users": {
+      "title": "users",
+      "description": "User profiles with role-based access control and saved addresses",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "city": { "type": "string" },
+        "role": { "type": "string" },
+        "authProvider": { "type": "string" },
+        "savedAddresses": { "type": "array" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "name", "role"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "IQBAL WOODCRAFT",
+  "description": "Premium Furniture Store & Custom Woodcrafting Master Android & Web Application",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

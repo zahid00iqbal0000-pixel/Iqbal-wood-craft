@@ -1,0 +1,84 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Common Helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidString(val, minLen, maxLen) {
+      return val is string && val.size() >= minLen && val.size() <= maxLen;
+    }
+
+    function isValidNumber(val, minVal, maxVal) {
+      return val is number && val >= minVal && val <= maxVal;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'zahid00iqbal0000@gmail.com' ||
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin'
+      );
+    }
+
+    // Products Collection
+    match /products/{productId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Orders Collection
+    match /orders/{orderId} {
+      allow create: if request.resource.data.customerName is string &&
+                       request.resource.data.phone is string &&
+                       request.resource.data.totalPkr is number;
+      allow read: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    // Custom Orders Collection
+    match /custom_orders/{customOrderId} {
+      allow create: if request.resource.data.customerName is string &&
+                       request.resource.data.phone is string &&
+                       request.resource.data.woodType is string;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // AI FAQs Collection
+    match /ai_faqs/{faqId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // AI Conversations
+    match /ai_conversations/{convId} {
+      allow create: if request.resource.data.customerName is string;
+      allow read, update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Payment Details
+    match /payment_details/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // User Profiles & Saved Addresses
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create, update: if isOwner(userId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+  }
+}

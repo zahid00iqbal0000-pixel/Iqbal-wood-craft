@@ -1,0 +1,23 @@
+{
+  "short_name": "IQBAL WOODCRAFT",
+  "name": "IQBAL WOODCRAFT - Solid Sheesham & Teak Wood Furniture",
+  "description": "Premier Handcrafted Solid Sheesham & Teak Furniture Store with 10-Year Termite Warranty and Pan-Pakistan Cargo Delivery.",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=192",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=512",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0c0a09",
+  "theme_color": "#d4af37",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["shopping", "lifestyle", "house_and_home"]
+}
