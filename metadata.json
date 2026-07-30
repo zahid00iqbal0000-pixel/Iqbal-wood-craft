@@ -1,6 +1,8 @@
 {
-  "name": "IQBAL WOODCRAFT",
-  "description": "Premium Furniture Store & Custom Woodcrafting Master Android & Web Application",
+  "name": "Remix IQBAL WOODCRAFT",
+  "description": "Premium Furniture Store \u0026 Custom Woodcrafting Master Android \u0026 Web Application",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
