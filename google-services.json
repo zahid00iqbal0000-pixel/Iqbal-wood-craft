@@ -1,0 +1,34 @@
+{
+  "project_info": {
+    "project_number": "176008157066",
+    "project_id": "igneous-imagery-sdw25",
+    "storage_bucket": "igneous-imagery-sdw25.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176008157066:android:da27ac70f2095f7c3c9a73",
+        "android_client_info": {
+          "package_name": "com.iqbalwoodcraft.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176008157066-iknpqgjof8uvhtajfo23mvil17a2sar2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyMRZAqNRRfwFGtQTkQQDqQNDzFwg1bCI"
+        }
+      ],
+      "services": {
+        "appdatastorage_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

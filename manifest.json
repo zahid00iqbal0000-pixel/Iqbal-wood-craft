@@ -1,0 +1,82 @@
+{
+  "id": "/",
+  "short_name": "IQBAL WOODCRAFT",
+  "name": "IQBAL WOODCRAFT - Solid Sheesham & Teak Wood Furniture",
+  "description": "Premier Handcrafted Solid Sheesham & Teak Furniture Store with 10-Year Termite Warranty and Pan-Pakistan Insured Cargo Delivery.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0c0a09",
+  "theme_color": "#d4af37",
+  "prefer_related_applications": false,
+  "categories": ["shopping", "lifestyle", "house_and_home"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Furniture Catalog",
+      "short_name": "Catalog",
+      "description": "View handcrafted solid wood beds, sofas, and dining sets",
+      "url": "/?tab=products",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Custom Order Request",
+      "short_name": "Custom Order",
+      "description": "Request custom furniture size, finish, and design",
+      "url": "/?tab=custom-order",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Track Cargo Shipment",
+      "short_name": "Track Cargo",
+      "description": "Track your Pakistan insured cargo delivery status",
+      "url": "/?tab=track-order",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "wide",
+      "label": "IQBAL WOODCRAFT Desktop Storefront"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "narrow",
+      "label": "IQBAL WOODCRAFT Mobile Storefront"
+    }
+  ]
+}
